@@ -1,0 +1,15 @@
+class Solution:
+   def searchRange(self, nums, target):
+     
+        for i in range(len(nums)):
+            if nums[i] == target:
+                a = i
+                break
+        else:
+            return [-1, -1]       
+        for j in range(len(nums)-1, -1, -1):
+            if nums[j] == target:
+                b = j
+                break
+        return [a,b]
+        

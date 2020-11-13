@@ -1,0 +1,7 @@
+class Solution:
+    def multiply(self, num1: str, num2: str) -> str:
+       
+        x=int("".join(num1))
+     
+        y=int("".join(num2))
+        return str(x*y)

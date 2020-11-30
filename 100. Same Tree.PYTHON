@@ -1,0 +1,10 @@
+class Solution:
+     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+      return str(p) == str(q)
+      
+      
+      
+      
+      
+      
+      

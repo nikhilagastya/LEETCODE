@@ -1,0 +1,13 @@
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        s = set()
+
+        while n != 1 and n not in s:
+	        s.add(n)
+	        t = [x for x in str(n)]
+
+	        n = 0
+	        for i in t:
+		        n += int(i)**2
+
+        return n == 1

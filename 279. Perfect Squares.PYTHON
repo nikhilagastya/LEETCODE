@@ -1,0 +1,14 @@
+import math
+class Solution:
+    def numSquares(self, n: int) -> int:        
+        dp = [x for x in range(n+1)]        
+        dp[0], dp[1] = 0, 1
+        
+        for i in range(2, n+1):
+            num = int(math.sqrt(i))
+            tmp = dp[i - num ** 2] + 1
+            for j in range(int(num/2), num):
+                tmp = min(tmp, dp[i - j**2] + 1)
+            dp[i] = tmp
+            
+        return dp[-1]

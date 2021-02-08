@@ -1,0 +1,10 @@
+class Solution:
+    def integerReplacement(self, n: int) -> int:
+        def reduce(n,rep):
+            if(n==1):
+                return rep
+            if(n%2==0):
+                return reduce(n//2,rep+1)
+            else:
+                return min(reduce(n+1,rep+1),reduce(n-1,rep+1))
+        return reduce(n,0)

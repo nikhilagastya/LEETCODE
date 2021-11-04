@@ -1,0 +1,4 @@
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        d=zip(s,t)
+        return(len(set(d))==len(set(s))==len(set(t)))

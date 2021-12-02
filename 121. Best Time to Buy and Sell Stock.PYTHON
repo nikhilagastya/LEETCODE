@@ -1,0 +1,10 @@
+class Solution:
+    def maxProfit(self, pri: List[int]) -> int:
+        m,l=pri[0],-float('inf')
+        for i in pri[1:]:
+            l=max(l,i-m)
+            m=min(m,i)
+        return l if l>0 else 0
+        
+
+        

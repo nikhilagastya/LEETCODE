@@ -1,0 +1,14 @@
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        nums=[]
+        if(len(nums1)<len(nums2)):
+            n=nums1
+            k=nums2
+        else:
+            n=nums2
+            k=nums1
+        for i in n:
+            if(i in k):
+                nums.append(i)
+                k.remove(i)
+        return nums

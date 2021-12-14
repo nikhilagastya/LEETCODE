@@ -1,0 +1,19 @@
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        from collections import Counter
+        #l=[i for i in s]
+        #l=sorted(l)
+        #f=sorted(l,key=l.count,reverse=True)                                  gives tle coz of more complexity!!!
+        #x=""
+        #for i in f:
+        #    x+=i
+        #return x
+    
+        x=Counter(s)
+        y=dict(x)
+        z=sorted(y.items(),key=lambda x:x[1],reverse = True)
+        q=""
+        for key,val in z:
+            q+=key*val
+        return q
+  

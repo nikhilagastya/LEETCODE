@@ -1,7 +1,7 @@
 class Solution(object):
     def isPalindrome(self, s):
         s = s.lower()   
-        x = ''
+        x = ' '
         for i in s:
             if i.isalnum():   
                 x+=(i)
